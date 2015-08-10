@@ -7,7 +7,9 @@
   };
 
   $(function() {
-    return $('h3.r > a').each($(this).prepend("<img src=" + favicon_src($(this).prop('href') + "/>")));
+    return $('h3.r > a').each(function() {
+      return $(this).prepend("<img src=" + favicon_src($(this).attr("href") + "/>"));
+    });
   });
 
 }).call(this);
